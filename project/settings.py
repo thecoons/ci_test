@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -83,10 +82,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'DatabasePreAnalytics',
-        'USER': 'django',
-        'PASSWORD': 'django_password',
-        'HOST': 'localhost',
+        'NAME': os.environ.get('DATABASE_NAME', 'DatabasePreAnalytics'),
+        'USER': os.environ.get('DATABASE_USER', 'django'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'django_password'),
+        'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
     }
 }
 
