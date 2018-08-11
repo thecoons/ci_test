@@ -10,7 +10,7 @@ httpie = "*"
 redgreenunittest = "*"
 
 [packages]
-"psycopg2" = "*"
+"psycopg2-binary" = "*"
 django = "*"
 djangorestframework = "*"
 gunicorn = "*"

@@ -11,8 +11,7 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PORT=5432
     build: .
-    # Change for a real server, this one shouldn't be in production
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: gunicorn project.wsgi
     volumes:
       - .:/code
     ports:
