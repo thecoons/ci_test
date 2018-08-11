@@ -11,7 +11,7 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PORT=5432
     build: .
-    command: gunicorn project.wsgi
+    command: gunicorn project.wsgi -b 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
