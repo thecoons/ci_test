@@ -1,5 +1,7 @@
 language: python
 
+sudo: required
+
 python:
 
   - "3.6"
@@ -7,6 +9,7 @@ python:
 services:
 
   - postgresql
+  - docker
 
 env:
 
@@ -26,3 +29,6 @@ before_script:
 script:
 
   - python manage.py test
+
+after_success:
+  - sh .travis/deploy_dockerhub.sh
