@@ -7,3 +7,4 @@
  RUN pip install pipenv
  RUN pipenv install --deploy --system
  ADD . /code/
+ CMD gunicorn project.wsgi
