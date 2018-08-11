@@ -10,11 +10,14 @@ services:
 
 env:
 
-  -DJANGO=2.1 DB=postgresql
+  -DJANGO=2.1
+  -DB=postgresql
+  -DOCKER_COMPOSE_VERSION=1.21.2
 
 install:
 
-  - pip install pipenv; pipenv install -d --system
+  - pip install pipenv
+  - pipenv install -d --system
 
 before_script:
 

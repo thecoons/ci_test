@@ -5,12 +5,12 @@ name = "pypi"
 
 [dev-packages]
 "flake8" = "*"
-"psycopg2" = "*"
 ipython = "*"
 httpie = "*"
 redgreenunittest = "*"
 
 [packages]
+"psycopg2" = "*"
 django = "*"
 djangorestframework = "*"
 
