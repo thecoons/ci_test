@@ -29,3 +29,6 @@ class PatientTest(TestCase):
         response = view(request)
 
         self.assertEqual(response.status_code, 200)
+
+    def test_dumby(self):
+        self.assertEqual(True, True)
