@@ -22,3 +22,10 @@ class PatientTest(TestCase):
         response = view(request)
 
         self.assertEqual(response.status_code, 200)
+
+    def test_get_patient(self):
+        view = PatientViewSet.as_view({'get': 'list'})
+        request = self.factory.get('api/patients/1/')
+        response = view(request)
+
+        self.assertEqual(response.status_code, 200)
