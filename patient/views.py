@@ -1,7 +1,7 @@
 from .models import Patient
 from .serializers import PatientSerializer
 
-from rest_framework import authentication, permissions, viewsets
+from rest_framework import authentication, viewsets
 
 
 class DefaultsMixin(object):

@@ -1,4 +1,4 @@
 #!/bin/sh
 pip install pipenv
 pipenv install -d --system
-pipenv intall flake8
+pipenv install flake8

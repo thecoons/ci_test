@@ -21,7 +21,7 @@ before_script:
 
 script:
 
-  - python manage.py test
+  - sh .travis/code_analyse.sh
 
 after_success:
   - sh .travis/deploy_dockerhub.sh
