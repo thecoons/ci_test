@@ -13,8 +13,7 @@ services:
 
 install:
 
-  - pip install pipenv
-  - pipenv install -d --system
+  - sh .travis/install.sh
 
 before_script:
 
