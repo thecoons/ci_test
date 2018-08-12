@@ -14,8 +14,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Patient',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(blank=True, default='', max_length=100)),
+                ('id', models.AutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID',
+                )),
+                ('name', models.CharField(
+                    blank=True, default='',
+                    max_length=100,
+                )),
                 ('is_smoker', models.BooleanField(default=False)),
                 ('registration_date', models.DateField(auto_now_add=True)),
             ],
